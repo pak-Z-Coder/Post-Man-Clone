@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="https://iconarchive.com/download/i106171/papirus-team/papirus-apps/postman.ico"
+        type="image/x-icon" />
+    <title>Post-Man Api Platform</title>
+  <link rel="stylesheet" href="/index.b27fe225.css">
+</head>
+
+<body >
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="location.reload()">
+                <img src="https://miro.medium.com/max/512/1*fVBL9mtLJmHIH6YpU7WvHQ.png" fill="none"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                    class="w-16 h-16 text-white p-2 bg-transparent rounded-full" viewBox="0 0 24 24">
+                <span class="ml-3 text-xl">Post-Man</span>
+            </a>
+        </div>
+    </header>
+    <main>
+
+        <h1 class="text-2xl font-['Roboto'] m-2 p-2 float-center">-The Api Master is here for you-</h1>
+
+        <div class="container block m-2 p-2 bg-slate-100 mx-auto h-fit ">
+            <div
+                class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0  items-center">
+                <!-- Url Box : -->
+                <div class="relative flex-grow w-full">
+                    <label for="Url" class="leading-7 text-sm text-gray-600">Url:</label>
+                    <input type="text" id="url" name="url"
+                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-transparent focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <!-- Requset Box: -->
+                <label for="Get Post" class="leading-7 text-sm text-gray-600 mx-4 p-2">Requset type:</label>
+                <div class="relative flex-grow w-full p-2">
+                    <div class="inline-block  w-fit px-2 mx-2  rounded border border-gray-200 dark:border-gray-700">
+                        <input id="getRadio" type="radio" value="GET" name="request-radio"
+                            class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ">
+                        <label for="bordered-radio-1"
+                            class=" py-4 ml-2 w-full text-sm font-medium text-black ">GET</label>
+                    </div>
+                    <div class="inline-block w-fit px-2 mx-2  rounded border border-gray-200 dark:border-gray-700">
+                        <input  id="postRadio" type="radio" value="POST" name="request-radio"
+                            class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="bordered-radio-2"
+                            class="py-4 ml-2 w-full text-sm font-medium text-black ">POST</label>
+                    </div>
+                </div>
+
+            </div>
+            <!--  -->
+            <hr class="mt-4">
+            <!--  -->
+            <!-- Content Box: -->
+            <label for="Json customPar" id="contentLabel" class="hidden leading-7 text-sm text-gray-600 mx-4 w-fit">Content type:</label>
+            <div
+            class="flex  lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0  items-center" id="contentBox" style="display:none">
+                <div class="relative flex-grow w-full p-2 items-center">
+                    <div class="inline-block  w-fit px-2 m-2  rounded border border-gray-200 dark:border-gray-700">
+                        <input id="jsonRadio" type="radio" value="Json" name="content-radio"
+                            class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="bordered-radio-1"
+                            class="py-4 ml-2 w-full text-sm font-medium text-black ">Json</label>
+                    </div>
+                    <div class="inline-block w-fit px-2 m-2  rounded border border-gray-200 dark:border-gray-700">
+                        <input id="customPar" type="radio" value="CustomPar" name="content-radio"
+                            class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="bordered-radio-2" class="py-4 ml-2 w-full text-sm font-medium text-black ">Custom
+                            Parameters</label>
+
+                    </div>
+                    <!--  -->
+                    <!-- Json Box -->
+                    <div class="relative  flex-grow w-fit border shadow-inner shadow-black p-4 rounded-lg" id="jsonBox" >
+
+                        <label for="reqJson"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Request Json:</label>
+                        <textarea id="reqJson" rows="4" cols="80"
+                        class="focus-outline-none block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-500 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
+                        placeholder="Your Json"></textarea>
+                    </div>
+                        <!--  -->
+                    <!--Parameters Box:  -->
+                    <div class="relative hidden flex-grow w-fit border border-orange-700 p-4 shadow-inner shadow-orange-300 rounded-lg" id="paramBox" >
+                        <label for="Parameters" class="leading-7 text-sm text-gray-600 px-1">Add Parameters like this : <p>key:value</p>
+                        </label>
+                        <div id="parametersDiv">
+                            <input type="text" id="Parameter1" name="Parameter1"
+                            class="w-fit m-1 inline-block bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-transparent focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            placeholder="parameter 1">
+                            <input type="text" id="Parameter2" name="Parameter2"
+                            class="w-fit m-1 inline-block bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-transparent focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            placeholder="parameter 2">
+                        </div>
+                        <button type="button"
+                            class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 m-1" id="addParam">Add </button>
+                        <button type="button"
+                            class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 m-1" id="removeParam">Remove</button>
+                           
+                    </div>
+                    
+                </div>
+            </div>
+          
+        </div>
+        <div class="relative  w-fit mx-auto flex justify-between" id="paramBox">
+            <button id="submit" type="button"
+                class="focus:outline-none inline-block text-white bg-red-700 hover:bg-red-800 focus:ring-1 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Submit</button>
+                <p id="alert" class="inline-block leading-7 mx-auto text-red-600 animate-pulse text-xl" style="display: none;">Please Fill all the reqired fields</p>
+        </div>
+        <div id="response" class=" m-2 p-2 bg-red-100 mx-auto h-fit "  >
+            <label for="responseBox"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Response:</label>
+        <textarea id="responseBox" rows="10" cols="80"
+            class="block p-2.5 w-full h-fit text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
+            placeholder="Your Response"></textarea>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
